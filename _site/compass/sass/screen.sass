@@ -1,0 +1,73 @@
+@import compass/utilities
+@import blueprint/reset
+@import partials/base
+@import blueprint
+@import blueprint/scaffolding
+@import partials/syntax
+
+// To generate css equivalent to the blueprint css but with your
+// configuration applied, uncomment:
+// @include blueprint
+
++blueprint-scaffolding("body")
+body
+  +blueprint-typography(true)
+  +blueprint-utilities
+  +blueprint-debug
+  +blueprint-interaction
+  color: #444
+
+  a
+    +link-colors(#a90010, #000, #a90010, #a90010)
+
+  #container
+    +container
+
+  header
+    margin-bottom: 20px
+
+    ul
+      +float-right
+      +inline-list
+
+      li
+        margin-left: 10px
+
+  footer
+    font-size: 12px
+
+  a
+    +hover-link
+
+  ul.posts
+    +no-bullets
+    padding: 0 0 0 30px
+
+    li
+      span.date
+        +float
+        color: #999
+        width: 100px
+
+  .highlight
+    background-color: transparent
+
+    pre
+      font-size: 14px
+      border: 2px dashed #ddd
+      background-color: #f9f9f9
+      padding: 10px
+
+      code
+        background-color: transparent
+        border: 0 none
+
+  code
+    font-size: 14px
+    background-color: #f9f9f9
+    border: 1px dashed #ddd
+    margin: -1px
+    padding: 1px
+
+form
+  +blueprint-form
