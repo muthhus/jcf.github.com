@@ -1,3 +1,3 @@
-# Pretend Textile
+# Pretend LaTeX
 
 Build it and they will come
