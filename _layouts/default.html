@@ -3,15 +3,30 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
     <title>jamesconroyfinn.com</title>
-    <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen" charset="utf-8">
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,italic,bold,bolditalic&subset=latin" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
+    <!--[if lt IE 8]>
+    <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
   </head>
 
   <body>
-    <header>
-      <a href="http://jamesconroyfinn.com">jamesconroyfinn.com</a>
-    </header>
     <div id="container">
-      {{ content }}
+      <header>
+        <a href="/">jamesconroyfinn.com</a>
+
+        <ul>
+          <li><a href="http://github.com/jcf">Github</a></li>
+          <li><a href="http://twitter.com/jamesconroyfinn">Twitter</a></li>
+        </ul>
+      </header>
+      <div id="content">
+        {{ content }}
+      </div>
+      <footer>
+        &copy; Copyright James Conroy-Finn unless otherwise stated
+      </footer>
     </div>
   </body>
 </html>
