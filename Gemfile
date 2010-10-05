@@ -1,6 +1,7 @@
 source :gemcutter
 
 gem 'jekyll'
+gem 'rdiscount'
 
 group :development, :test do
   gem 'shotgun'
