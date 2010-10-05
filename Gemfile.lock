@@ -27,5 +27,6 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth
+  jekyll
   rack-jekyll
   shotgun

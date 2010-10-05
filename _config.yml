@@ -1,3 +1,11 @@
 markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:title.html
+exclude:
+  - config.rb
+  - config.ru
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - compass
