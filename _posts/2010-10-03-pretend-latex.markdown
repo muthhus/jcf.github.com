@@ -3,8 +3,6 @@ layout: post
 title: Pretend Textile
 ---
 
-# {{ page.title }}
-
 I've been working on a new blogging system recently with the intention of
 powering [jamesconroyfinn.com](http://jamesconroyfinn.com) using it. It
 featured a unique design per page and a giant footer with a 'slick' jQuery

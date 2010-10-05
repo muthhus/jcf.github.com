@@ -1,6 +1,7 @@
 markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:title.html
+lsi: true
 exclude:
   - config.rb
   - config.ru
