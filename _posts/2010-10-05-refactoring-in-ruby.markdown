@@ -71,7 +71,7 @@ end
 
 ## Initialisation
 
-Let's start with the #initialize method. It takes a whole lot of arguments, in
+Let's start with the `#initialize` method. It takes a whole lot of arguments, in
 a very specific order, which makes it quite difficult to work with.
 
 {% highlight ruby %}
@@ -428,5 +428,10 @@ class Babe
   end
 end
 {% endhighlight %}
+
+There are a few issues with the code. First off weight and hotness comparisons
+in `#fit?` and `#beautiful?` will blow up if we don't set the attributes before
+calling `#in_my_league?`. But it's purpose is to indicate some refactoring
+techniques.
 
 So that's it. Refactored and all round an improvement I think.
