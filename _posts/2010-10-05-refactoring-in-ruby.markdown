@@ -415,6 +415,14 @@ class Babe
     @nationality = Nationality.find(place)
   end
 
+  def fit?
+    @weight < 100
+  end
+
+  def beautiful?
+    @hotness > 2
+  end
+
   def in_my_league?
     fit? ^ beautiful?
   end
