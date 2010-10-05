@@ -416,11 +416,11 @@ class Babe
   end
 
   def fit?
-    @weight < 100
+    weight < 100
   end
 
   def beautiful?
-    @hotness > 2
+    hotness > 2
   end
 
   def in_my_league?
