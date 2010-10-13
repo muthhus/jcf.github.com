@@ -400,20 +400,22 @@ her nationality improving code quality and perpetuating confusing stereotypes.
 require 'active_support/core_ext/hash'
 
 class Nationality < Struct.new(:name, :dance_move, :speech)
-  def self.all
-    @nationalities ||= [
-      Nationality.new('American', 'Grind', 'Totally'),
-      Nationality.new('British', 'Wiggle', 'Woteva'),
-      Nationality.new('German', 'Strut', 'Ja'),
-    ]
-  end
+  class << self
+    def all
+      @nationalities ||= [
+        Nationality.new('American', 'Grind', 'Totally'),
+        Nationality.new('British', 'Wiggle', 'Woteva'),
+        Nationality.new('German', 'Strut', 'Ja'),
+      ]
+    end
 
-  def self.default
-    @default ||= Nationality.new('Unknown', 'Bounce', 'Hi')
-  end
+    def default
+      @default ||= Nationality.new('Unknown', 'Bounce', 'Hi')
+    end
 
-  def find(place)
-    all.detect { |nationality| nationality.name == place }
+    def find(place)
+      all.detect { |nationality| nationality.name == place }
+    end
   end
 
   alias :dance :dance_move
