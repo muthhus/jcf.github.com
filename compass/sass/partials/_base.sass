@@ -4,6 +4,23 @@ $blueprint-grid-margin    : 10px
 
 $blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $blueprint-grid-columns - $blueprint-grid-margin
 
-$blueprint-font-family       : 'Vollkorn', serif
-$blueprint-font-size         : 16px
+$blueprint-font-size         : 14px
 $blueprint-fixed-font-family : Menlo, Monaco, monospace
+
+@import compass
+@import blueprint
+@import blueprint/fancy-type
+@import blueprint/scaffolding
+@import syntax
+
+=helvetica($size = false)
+  @if $size != false
+    font-size: $size
+  font-family: 'helvetica neue', helvetica, sans-serif
+
+=inset_box($radius = false)
+  padding: 5px
+  +text-shadow(rgba(#000, 0.1), 1px, 1px, 2px)
+  +linear-gradient(color-stops(#f0f0f0, #fefefe, #f0f0f0))
+  @if $radius != false
+    +border-radius($radius)

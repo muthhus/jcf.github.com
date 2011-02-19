@@ -35,8 +35,6 @@ I'm using [jekyll](http://github.com/mojombo/jekyll),
 [Google Fonts](http://code.google.com/webfonts) among other things to make my
 site look like it was build using LaTex.
 
----
-
 ## What it looks like
 
 Code blocks:

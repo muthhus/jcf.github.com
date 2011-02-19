@@ -2,6 +2,7 @@ source :gemcutter
 
 gem 'jekyll'
 gem 'rdiscount'
+gem 'gsl'
 
 group :development, :test do
   gem 'shotgun'

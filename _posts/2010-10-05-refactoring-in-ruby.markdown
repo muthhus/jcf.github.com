@@ -120,8 +120,6 @@ We're working with Ruby, which means we can do almost anything we want to a babe
 but let's remember what DHH said, there's always a beautiful way to do something
 and that's what we want. Beautiful babes.
 
----
-
 ## Initialisation
 
 Let's start with the `#initialize` method. It takes a whole lot of arguments, in
@@ -220,8 +218,6 @@ Why you might ask? Because `attr_accessors_from_hash` isn't part of Ruby. The
 method name is relatively self-explanatory but once you find the implementation
 consider this. What the hell does that method do? I'd argue it's not very
 readable and to be honest quite unnecessary.
-
----
 
 ## Dancing & Speaking
 
