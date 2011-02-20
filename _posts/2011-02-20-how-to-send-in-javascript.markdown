@@ -38,7 +38,7 @@ var rainbow = {
 }
 
 var color = function(name, bright) {
-  var valid_color = rainbow[name + '_' + (bright ? 'bright' : 'dark')];
+  var valid_color = rainbow[(bright ? 'bright' : 'dark') + '_' + name];
   if (valid_color) return '#' + valid_color();
 }
 {% endhighlight %}
