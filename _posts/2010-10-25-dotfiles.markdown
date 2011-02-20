@@ -1,0 +1,122 @@
+---
+title: Voyeurism and your dotfiles
+layout: post
+---
+
+I'm a little bit obsessed with dotfiles. I like looking at your dotfiles. I
+find it fascinating being able to get an insight in to how you work and to some
+degree how your brain works. Github is overflowing with people's configuration
+files. If you search Github for [dotfiles][] there are over 100 pages of
+results from the likes of [Ryan Bates][], [Mislav Marohnić][], and
+[me](http://github.com/jcf/dotfiles).
+
+## Origins
+
+I started my dotfiles based upon Ryan Bates' setup because I liked his simple
+use of `rake` to soft link configuration files. Soft-linking your dotfiles
+means updates are instantaneous and all your files hang around in an
+encapsulated location readily available via a
+[`cdot`](http://github.com/jcf/dotfiles/blob/master/zsh/aliases#L6) command.
+
+I ended up refactoring the installer to use a more object-orientated approach
+to linking files and even had my 'new improved' rake task read my Github token
+but the more I looked at it the more I thought it was an overengineered
+solution to an incredibly simple problem.
+
+Luckily I stumbled upon [Mislav Marohnić][]'s dotfiles and in it found an
+[installer](http://errtheblog.com/posts/89-huba-huba) created by [Chris
+Wanstrath][]. It's ultra-simple and very easy to work with, which is why I fell
+in love with it!
+
+## Features
+
+My [dotfiles][] include a load of ZSH configuration files, which add useful
+aliases for git and support RVM and Ruby on Rails development as well as
+including the best Vim plugins I've found in the few years I've been hacking
+with Vim.
+
+### git
+
+I've borrowed, written and stolen a lot of `git` aliases and scripts from all
+over the place in the last few years. I've listed some interesting tidbits
+below.
+
+- `git last` Prints the last commit
+- `git db` Delete a local and remote branch in one command
+- `git lg` Print a list of commits with relative commit dates
+
+And there are loads more, which can be found in my
+[gitconfig](http://github.com/jcf/dotfiles/blob/master/gitconfig).
+
+### zsh
+
+I always use Z-Shell. I love it and wouldn't want to have to switch back to use
+Bash. I love the brilliant completion system, the fantastic globbing support
+and mind-boggling filtering available right on the command-line.
+
+[![ZSH shot](/images/zsh-shot.png)](/images/zsh-shot.png)
+
+You might notice I've got custom window and tab titles, a mini left-hand prompt
+and although you can't see it above I have a right-hand prompt that includes
+the current git branch (visit the full-size image and you'll see the right-hand
+prompt).
+
+I use a lot of aliases including `gs` which is an alias for `git status -sb`.
+Something I like because it's succinct and only shows me what I need to know.
+
+I also have global aliases for grepping and lessing output, which I've pasted
+below.
+
+{% highlight sh %}
+A='|ack'
+G='|grep'
+H='|head'
+L='|less'
+N='&>/dev/null&'
+T='|tail'
+W='|wc'
+{% endhighlight %}
+
+As far as I'm aware this is a feature not available in Bash, although I might
+be wrong.
+
+<h3>Ruby <span class="alt">&</span> IRB</h3>
+
+My [irbrc][] has a few useful methods and tricks that might be of interest. I'm
+a particular fan of my cutdown version of Giles Bowkett's work to launch vim
+from IRB in order to ease editing longer bits of Ruby.
+
+There's a nicely wrapped up
+[interactive_editor](http://github.com/jberkel/interactive_editor) gem you
+might be interested in using if you decide you want the same behaviour but with
+multiple editor support.
+
+I stole `quick` from Evan Phoenix I think. It was definitely one of the
+Rubinius guys.
+
+{% highlight ruby %}
+def quick(repetitions = 100, &block)
+  require 'benchmark'
+  Benchmark.bmbm do |b|
+    b.report { repetitions.times(&block) }
+  end
+  nil
+end
+
+quick(1000) { 'string' << ' two three' }
+quick(1000) { 'string' + ' two three' }
+{% endhighlight %}
+
+## Conclusion
+
+There are a lot more customisations I use daily and I haven't even touched on
+what I've done to vim via my [dotfiles][]; that's for another day.
+
+Feel free to email me or send me a message through Github if you like something
+in my [dotfiles][], notice a problem or have something to contribute.
+
+[Ryan Bates]: http://github.com/ryanb/dotfiles
+[Mislav Marohnić]: http://github.com/mislav/dotfiles
+[Chris Wanstrath]: http://errtheblog.com/
+[dotfiles]: http://github.com/jcf/dotfiles
+[irbrc]: http://github.com/jcf/dotfiles/blob/master/irbrc
