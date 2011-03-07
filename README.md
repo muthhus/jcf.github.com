@@ -1,3 +1,3 @@
-# Pretend LaTeX
+# jcf.github.com
 
-Build it and they will come
+### The jekyll site that powers [jamesconroyfinn.com]()
