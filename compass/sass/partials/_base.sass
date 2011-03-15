@@ -7,18 +7,20 @@ $blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $b
 $blueprint-font-size         : 14px
 $blueprint-fixed-font-family : Menlo, Monaco, monospace
 
+$link-color: #a90010
+
 @import compass
 @import blueprint
 @import blueprint/fancy-type
 @import blueprint/scaffolding
 @import syntax
 
-=helvetica($size = false)
+=helvetica($size: false)
   @if $size != false
     font-size: $size
   font-family: 'helvetica neue', helvetica, sans-serif
 
-=inset_box($radius = false)
+=inset_box($radius: false)
   padding: 5px
   +text-shadow(rgba(#000, 0.1), 1px, 1px, 2px)
   +linear-gradient(color-stops(#f0f0f0, #fefefe, #f0f0f0))

@@ -18,7 +18,7 @@ body
     +alt
 
   a
-    +link-colors(#a90010, #000, #a90010, #a90010)
+    +link-colors($link-color, #000, #a90010, #a90010)
 
   #container
     +container
@@ -60,6 +60,26 @@ body
 
         &:hover
           background-color: #444
+
+  #quick-link
+    +box-shadow(rgba(#000, 0.2), 1px, 1px, 3px)
+    background-color: #fffbe6
+    cursor: pointer
+    margin: 0 20px 40px
+    padding: 20px
+
+    p
+      margin: 0
+
+    p.description
+      font-size: 24px
+      text-shadow: 1px 1px 2px rgba(#000, 0.2)
+
+    p.url
+      color: $link-color
+
+    &:active
+      padding: 21px 19px 19px 21px
 
   footer
     font-size: 12px
