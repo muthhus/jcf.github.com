@@ -3,42 +3,8 @@ layout: post
 title: How To Send In Javascript
 ---
 
-In Ruby you can and probably often do send messages in a couple of ways.
+Ruby gives you a number of ways to send messages to objects. You can use
+dot syntax to send a message, you can use `#send` and you can access
+methods directly using `#method`.
 
-{% highlight ruby %}
-'receiver'.length
-'receiver'.send(:length)
-'receiver'.method(:length).call
-{% endhighlight %}
-
-So how do you achieve the same in Javascript?
-
-## Sending Messages in Javascript
-
-{% highlight javascript %}
-'receiver'.length()
-'receiver'['length']()
-{% endhighlight %}
-
-### Dynamic Messages
-
-So knowing you can access methods on a receiver in Javascript using `#[]` you
-can start doing some interesting things.
-
-{% highlight javascript %}
-var rainbow = {
-  dark_red: '900',
-  bright_red: 'f00',
-
-  dark_green: '090',
-  bright_green: '0f0',
-
-  dark_blue: '009',
-  bright_blue: '00f'
-}
-
-var color = function(name, bright) {
-  var valid_color = rainbow[(bright ? 'bright' : 'dark') + '_' + name];
-  if (valid_color) return '#' + valid_color();
-}
-{% endhighlight %}
+<script src="https://gist.github.com/965299.js"></script>

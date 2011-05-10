@@ -2,14 +2,28 @@
 
 +blueprint-scaffolding("body")
 body
+  background-color: $blueprint-background-color
   +blueprint-typography(true)
   +blueprint-utilities
-  +blueprint-debug
   +blueprint-interaction
-  color: #444
+
+  header
+    +clearfix
+
+    ul
+      +column($blueprint-grid-columns, true)
+      margin: 0
+      padding: 0
+
+      li
+        margin-right: 20px
+        padding: 0
+        +float
 
   blockquote
     font-style: normal
+    color: $font-color
+    padding-left: 20px
 
   .caps
     +caps
@@ -20,20 +34,8 @@ body
   .alt
     +alt
 
-  a
-    +link-colors($link-color, #000, #a90010, #a90010)
-
   #container
     +container
-
-  #content
-    h1, h2, h3, h4
-      text-transform: uppercase
-      font-weight: bold
-      letter-spacing: -0.05em
-
-    h2, h3, h4
-      border-bottom: 3px solid #eee
 
   #about-me img
     +float
@@ -41,32 +43,9 @@ body
     margin-right: 15px
     border: 1px solid #ccc
 
-  header
-    margin: 0
-
-    h2
-      margin: 0
-      padding: 0
-
-      a.title
-        +text-shadow(rgba(#000, 0.2), 1px, 1px, 2px)
-        +border-radius
-        display: block
-        font-size: 16px
-        font-weight: bold
-        background-color: #a90010
-        padding: 5px 10px
-        color: #fff
-        font-size: 16px
-        text-decoration: none
-        +transition('background-color', 0.4s, 'ease-out')
-
-        &:hover
-          background-color: #444
-
   #quick-link
     +box-shadow(rgba(#000, 0.2), 1px, 1px, 3px)
-    background-color: #fffbe6
+    background-color: #fff
     cursor: pointer
     margin: 0 20px 40px
     padding: 20px
@@ -85,24 +64,16 @@ body
       padding: 21px 19px 19px 21px
 
   footer
-    font-size: 12px
-    background-color: #f0f0f0
-    +linear-gradient(color-stops(#f0f0f0, #fefefe, #f0f0f0))
-    color: #666
-    margin: 20px 0
+    margin: 40px 0
     padding: 5px 10px
-    border: 1px solid #eee
-    +border-radius
     +clearfix
 
     h5
-      text-transform: uppercase
-      font-size: 12px
       margin: 0
       padding: 0
 
     .column
-      +column(4)
+      +column(6)
 
       &:last-child
         +last
@@ -118,7 +89,6 @@ body
 
         a,
         a:visited
-          font-family: 'Myriad Pro', Corbel, 'Lucida Grande', Verdana, sans-serif
           color: #666
 
   a
@@ -151,43 +121,23 @@ body
         span.date
           +float
           color: #444
-          width: 90px
+          width: 120px
           text-align: right
-          font-size: 11px
+          font-size: 14px
           height: 20px
           line-height: 20px
           padding: 2px 5px
           margin: 5px 10px 5px 0
 
-        &:hover
-          border: 1px solid #eee
-          background-color: #999
-          +inset_box(5px)
-          padding: 0
-
-          span.title
-            text-decoration: underline
-
-  .highlight
-    background-color: transparent
-
-    pre
-      font-size: 12px
-      border: 1px solid #ddd
-      background-color: ghostWhite
-      padding: 10px
-      +border-radius
-
-      code
-        background-color: transparent
-        border: 0 none
-
-  code
+  pre
+    padding: 10px
     font-size: 12px
-    background-color: ghostWhite
-    border: 1px solid #ddd
-    margin: -1px
-    padding: 1px
+
+    code
+      border: 0 none
+
+  .gist .gist-file .gist-meta
+    font-size: 10px
 
 form
   +blueprint-form
