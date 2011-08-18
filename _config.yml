@@ -3,6 +3,7 @@ pygments: true
 permalink: /:year/:month/:title.html
 lsi: true
 paginate: 5
+description: The thoughts and opinions I share online
 exclude:
   - config.rb
   - config.ru

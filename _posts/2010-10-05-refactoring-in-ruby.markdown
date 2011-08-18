@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Refactoring in Ruby
+description: "Writing code for machines is a craft. Writing code for humans is an art and Refactoring: Ruby Edition is a fantastic resource that I found to be quite inspirational."
 ---
 
 After reading [Refactoring: Ruby Edition][] by [Jay Fields][] a colleague

@@ -4,7 +4,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>{{ page.title }} — jamesconroyfinn.com</title>
 
-    <meta name="description" content="The homepage of James Conroy-Finn">
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
     <meta name="keywords" content="james, conroy, finn, james conroy-finn, jcf, ruby, rails, javascript">
     <meta name="viewport" content="device-width=640, user-scalable=yes">
     <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=jamesconroyfinn.myopenid.com">

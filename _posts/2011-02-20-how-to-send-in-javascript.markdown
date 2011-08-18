@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How To Send In Javascript
+description: Ruby can send messages in a number of ways but you might be surprised to find Javascript can do a lot of what Ruby can do, albeit in a very different way.
 ---
 
 Ruby gives you a number of ways to send messages to objects. You can use

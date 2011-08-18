@@ -1,6 +1,7 @@
 ---
 layout: post
 title: jQuery Animate
+description: jQuery is full of hidden goodies, one of which is animate. It does so much more that it says on the tin.
 ---
 
 jQuery's `animate` does a lot more than just scaling and translating nodes in a

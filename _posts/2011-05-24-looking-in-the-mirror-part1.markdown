@@ -1,6 +1,7 @@
 ---
 title: Looking in the Mirror - Part 1
 layout: post
+description: UsesThis gives a similar insight in to how some of your most inspirational developers work as dotfiles. The difference being it transcends the boundary of a shell to a much greater degree.
 ---
 
 I find it quite interesting to see how other people who and what tools

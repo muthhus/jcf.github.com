@@ -1,6 +1,7 @@
 ---
 title: Please do REST right
 layout: post
+description: REST can be a fantastic guiding mantra when builing an API; I know I use it extensively to provide consistency and a low barrier to entry.  Sadly some people claim to offer RESTful APIs but are far from getting it right.
 ---
 
 I recently received an email from a large email delivery company

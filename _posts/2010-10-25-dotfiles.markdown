@@ -1,6 +1,7 @@
 ---
 title: Voyeurism and your dotfiles
 layout: post
+description: Dotfiles are an insight in to how we work, the tools we use and make us more productive.
 ---
 
 I'm a little bit obsessed with dotfiles. I like looking at your dotfiles. I

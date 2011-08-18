@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Pretend Textile
+description: Every blog needs a style and I've been heavily influenced by producing a lot of LaTeX documents recently.
 ---
 
 I've been working on a new blogging system recently with the intention of
