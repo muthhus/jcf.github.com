@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} — jamesconroyfinn.com</title>
 
     <meta name="description" content="The homepage of James Conroy-Finn">
     <meta name="keywords" content="james, conroy, finn, james conroy-finn, jcf, ruby, rails, javascript">
@@ -19,10 +19,8 @@
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
     <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
     <!--[if lt IE 8]>
-      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css">
     <![endif]-->
-
-    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -30,71 +28,61 @@
       _gaq.push(['_trackPageview']);
 
       (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-  </head>
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
+     </script>
+   </head>
 
-  <body>
-    <div id="container">
-      <header>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="http://github.com/jcf">Github</a></li>
-          <li><a href="http://twitter.com/jamesconroyfinn">Twitter</a></li>
-          <li><a href="http://flickr.com/photos/jamesconroyfinn">Flickr</a></li>
-          <li><a href="http://last.fm/user/jamesconroyfinn">Last.fm</a></li>
-          <li><a href="/key.html">Public Key</a></li>
-        </ul>
-      </header>
-
-      <div id="content">
-        {{ content }}
+   <body>
+    <header>
+      <div class="content">
+        <h2>
+          <a href="/">
+            <img src="http://www.gravatar.com/avatar/18c2795810ee15d41956e7f4cc5f3338?s=64" title="" alt="Gravatar"></img>
+            jamesconroyfinn.com
+          </a>
+        </h2>
       </div>
+    </header>
 
-      <footer>
-        <div class="column">
-          <h5>Find Me Online</h5>
-          <ul>
-            <li><a href="http://github.com/jcf">Github</a></li>
-            <li><a href="http://twitter.com/jamesconroyfinn">Twitter</a></li>
-            <li><a href="http://flickr.com/photos/jamesconroyfinn">Flickr</a></li>
-            <li><a href="http://last.fm/user/jamesconroyfinn">Last.fm</a></li>
-          </ul>
+    <div id="container">
+      <div id="inner-container">
+        <div id="content">
+          {{ content }}
         </div>
 
-        <div class="column">
-          <h5>Built Using</h5>
-          <ul>
-            <li><a href="http://github.com/mojombo/jekyll">Jekyll</a></li>
-            <li><a href="http://haml-lang.com/">HAML <span class="alt">&</span> SASS</a></li>
-            <li><a href="http://compass-style.org">Compass</a></li>
-            <li><a href="http://www.blueprintcss.org/">Blueprint</a></li>
-          </ul>
+        <div id="recent-posts">
+          <nav>
+          <h2>Posts</h2>
+           {% include posts.textile %}
+          </nav>
         </div>
 
-        <div class="column">
-          <h5>Pages</h5>
-          <ul>
-            <li><a href="/key.html">Public Key</a></li>
-          </ul>
-        </div>
-      </footer>
+      </div>
     </div>
 
-    <script type="text/javascript">
-      (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '4d6e646ee8d14c4200000002');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-      })();
-    </script>
+    <footer>
+      <div class="content">
+        <ul>
+          <li>
+            <a href="/">jamesconroyfinn.com</a>
+          </li>
+
+          <li>
+            <a href="/key.html">Key</a>
+          </li>
+
+          <li>
+            <a href="https://github.com/jcf">Github</a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/jamesconroyfinn">Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

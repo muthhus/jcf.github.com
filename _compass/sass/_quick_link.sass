@@ -1,0 +1,29 @@
+#quick-link
+  +box-shadow(rgba(#000, 0.2) 1px 1px 3px, rgba(#000, 0.4) 2px 2px 16px)
+  +border-radius(10px)
+  +background-image(linear-gradient(#fff, #eee))
+  cursor: pointer
+  margin: 0 20px 40px
+  padding: 20px
+  border: 4px solid #fff
+
+  p
+    margin: 0
+
+  p.description
+    font-size: 24px
+    text-shadow: 1px 1px 2px rgba(#000, 0.2)
+
+  p.url
+    color: $link-color
+
+  &:hover
+    +background-image(linear-gradient(darken($link-color, 10%), $link-color))
+
+    p
+      &.description,
+      &.url
+        color: #fff
+
+  &:active
+    padding: 21px 19px 19px 21px

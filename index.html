@@ -2,17 +2,15 @@
 layout: default
 title: jamesconroyfinn.com
 ---
-{% include about_me.textile %}
-
-<h2>Posts</h2>
-
-<ul class="posts">
-  {% for post in site.posts %}
-  <li>
-    <a href="{{ post.url }}">
-      <span class="date">{{ post.date | date: '%d %B %Y' }}</span>
-      <span class="title">{{ post.title }}</span>
-    </a>
-  </li>
+<div class="posts">
+  <ul>
+  {% for post in paginator.posts %}
+    <li class="post">
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <div class="body">
+        {{ post.content }}
+      </div>
+    </li>
   {% endfor %}
-</ul>
+  </ul>
+</div>

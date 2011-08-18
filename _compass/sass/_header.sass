@@ -1,0 +1,37 @@
+header
+  +clearfix
+  +background-image(linear-gradient(#fff, #eee))
+  border-bottom: 1px solid #ddd
+  margin: 0
+  padding: 0
+
+  .content
+    width: 920px
+    margin: 0 auto
+
+    h2
+      line-height: 70px
+
+      a
+        display: block
+        text-decoration: none
+
+        img
+          +float
+          +transition
+          padding: 2px
+          margin-right: 10px
+          background-color: #fff
+          border: 1px solid #ccc
+
+        &:hover img
+          +rotate(-4deg)
+
+    ul
+      margin: 0
+      padding: 0
+
+      li
+        margin-right: 20px
+        padding: 0
+        +float
