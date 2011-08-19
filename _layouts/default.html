@@ -6,7 +6,7 @@
 
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
     <meta name="keywords" content="james, conroy, finn, james conroy-finn, jcf, ruby, rails, javascript">
-    <meta name="viewport" content="device-width=640, user-scalable=yes">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=2">
     <meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=jamesconroyfinn.myopenid.com">
 
     <link rel="openid.server" href="http://www.myopenid.com/server">
@@ -58,12 +58,11 @@
         </div>
 
         <div id="recent-posts">
-          <nav>
-          <h2>Posts</h2>
-           {% include posts.textile %}
-          </nav>
+          <aside role="sidebar">
+            <h2>Posts</h2>
+             {% include posts.textile %}
+          </aside>
         </div>
-
       </div>
     </div>
 

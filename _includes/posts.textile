@@ -1,6 +1,7 @@
 <ul class="posts">
   {% for post in site.posts %}
   <li>
+
     <p>
       <a class="title" href="{{ post.url }}">{{ post.title }}</a>
     </p>
@@ -8,6 +9,7 @@
     <p class="date">
       Posted on {{ post.date | date: '%b %d' }}
     </p>
+
   </li>
   {% endfor %}
 </ul>
