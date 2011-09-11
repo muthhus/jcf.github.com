@@ -6,7 +6,7 @@
       <a class="title" href="{{ post.url }}">{{ post.title }}</a>
     </p>
 
-    <p class="date">
+    <p class="meta">
       Posted on {{ post.date | date: '%b %d' }}
     </p>
 
