@@ -1,0 +1,34 @@
+$minimum-footer-height: 20px
+
+footer
+  clear: both
+  border-top: 1px solid #000
+
+  .content
+    width: $content-width
+    margin: 0 auto
+    padding: 20px 0
+    color: #ccc
+    min-height: $minimum-footer-height
+
+    ul
+      margin: 0
+      padding: 0
+
+      li
+        list-style: none
+        margin-right: 20px
+        +float
+
+        a
+          +link-colors(#ccc, #fff, #ddd, #bbb)
+          +border-radius
+          background-color: rgba(#000, 0.4)
+          padding: 4px 10px
+          text-shadow: 1px 1px 1px rgba(#000, 0.6)
+          +single-transition(all, 0.2s, ease-out)
+          +single-box-shadow(rgba(#000, 0.6), 1px, 1px, 4px, 0, inset)
+
+          &:hover
+            background-color: rgba(#000, 0.8)
+            text-decoration: none
